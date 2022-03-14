@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--- link https://www.youtube.com/watch?v=Q4uZUKiBY5M-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox">
+</body>
+<style>
+    body{
+        margin: 0; background-color: #E7F2EF;
+        display: flex; height: 100vh;
+        justify-content: center;
+        align-items: center;        
+    }
+    input[type="checkbox"]{
+        width: 200px; height: 100px;
+        appearance: none;
+        background-color: #DAE2DF;
+        border-radius: 50px;
+        box-shadow: inset 0 0 16px 1px rgba(0,0,0, 0.24);
+        cursor: pointer;
+        transition: ease .4s;
+        position: relative; /** Obriga os elementos filhos a ficar presos*/
+    }
+    input:checked[type="checkbox"]{
+        /* background-color: red; */
+        background-color: #3DECB1;
+    }
+    input[type="checkbox"]::before{
+        content: '';
+        width: 100px; height: 100px;
+        background-color: #EDF3F1;
+        border-radius: 50px;
+        position: absolute;
+        box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.25);
+        transform: scale(1.1);
+        top: 0; left: 0;
+        transition: ease .5s;
+    }
+    input:checked[type="checkbox"]::before{
+        left: 100px;
+    }
+</style>
+</html>

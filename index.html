@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+        <head>
+            <meta charset="UTF-8">
+            <title>Login App</title>
+            <link rel="stylesheet" href="login.css">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" >
+        </head>
+        <body>
+            <form id="form">
+                <h1>Área Restrita</h1>
+                <div class="row">
+                    <label for="email">Usuário</label>
+                    <input type="text" id="email" class="form-control">
+                </div>
+                <div class="row">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" class="form-control">
+                </div>
+                <div class="row">
+                    <button id="btn" class="btn btn-lg btn-primary btn-block mt-3">Entrar</button>
+                </div>
+            </form>
+        </body>
+        <script>
+            let btn = document.querySelector("#btn")
+            let input_email = document.querySelector("#email")
+            let input_senha = document.querySelector("#senha")
+
+            /***Usuaria default*/
+            let email = "admin@gmail.com"
+            let senha = "admin"
+
+            function validar(campo1, campo2){
+                if(input_email.value === ""){
+                    alert("Preencha o campo email!")
+                }else if(input_senha.value === ""){
+                    alert("Preencha o campo senha!")
+                }
+            }
+
+            btn.addEventListener("click", function(e){ e.preventDefault()
+                
+                validar();
+
+                if(input_email.value === email){
+
+                }
+                if(input_senha.value === senha){
+                    location.href = '/painel.html'
+                }else{
+                    alert("Usuário ou senha inválidos")
+                }
+            
+            })
+            
+        </script>
+</html>
